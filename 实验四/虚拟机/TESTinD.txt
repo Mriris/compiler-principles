@@ -1,0 +1,22 @@
+int all1;
+int all2;
+int all3;
+int a;
+function sum(int x,int y)
+{
+int e;
+int b;
+e=x+y;
+return e;
+}
+function mul(int p,int q)
+{
+int d;
+all3=55;
+d=p*q;
+}
+main()
+{
+call mul(22,33);
+write all3;
+}

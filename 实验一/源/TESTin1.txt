@@ -1,0 +1,33 @@
+int main()
+{
+int a;
+for(a=1;a<3;a=a+1)
+{
+b=a+1;
+}
+//这是注释
+/*这也是注释*/
+do
+{
+a=a+1;
+}whiles(s=0);
+a=fun(a,b);
+switch(a)
+{
+case 0:
+a=a+1;
+break;
+case 2:
+a=1;
+break;
+}
+}
+int fun(int a,int b[])
+{
+if(a>b)
+return a;
+else if(a==b)
+return b;
+else
+return 0;
+}

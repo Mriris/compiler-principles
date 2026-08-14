@@ -1,0 +1,16 @@
+int main()
+{
+int a;
+int b;
+for(a=1;a<3;a=a+1)
+{
+b=a+1;
+}
+//这是注释
+/*这也是注释*/
+do
+{
+a=a+1;
+}while(a=0;
+return a;
+}

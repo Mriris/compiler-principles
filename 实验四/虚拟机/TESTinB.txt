@@ -1,0 +1,45 @@
+int all1;
+int all2;
+int all3;
+int a;
+function sum(int x,int y)
+{
+int e;
+int b;
+e=x+y;
+all3=111;
+return e;
+}
+function mul(int p,int q)
+{
+int d;
+all3=55;
+d=p*q;
+all3=222;
+}
+main()
+{
+int a;
+int b;
+int c;
+int d;
+read c;
+for(a=2;a<3;a=a+9)
+{
+b=a+99;
+}
+if(a>=b)
+a=a-b;
+else
+b=b-a;
+//这是注释
+/*这也是注释*/
+call b=sum(22,33);
+do
+{
+a=a+999;
+}while(a==0);
+write all3;
+write b;
+write c;
+}

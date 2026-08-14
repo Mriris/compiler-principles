@@ -1,0 +1,10 @@
+int all1;
+function ttt(){
+all1=66;
+}
+main()
+{
+int a;
+call ttt();
+write all1;
+}

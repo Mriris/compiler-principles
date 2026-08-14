@@ -1,0 +1,25 @@
+function sum(int c,int d)
+{
+int e;
+e=c+d;
+}
+int main()
+{
+int a;
+int b;
+for(a=1;a<3;a=a+9)
+{
+b=a+99;
+}
+if(a>=b)
+a=a-b;
+else
+b=b-a;
+//这是注释
+/*这也是注释*/
+call sum(a,b);
+do
+{
+a=a+999;
+}while(a==0);
+}

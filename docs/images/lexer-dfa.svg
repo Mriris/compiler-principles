@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="760" height="470" fill="#f8fafc" stroke="#e2e8f0"/>
+
+  <!-- 起点 -->
+  <text x="48" y="205" text-anchor="middle" font-size="11" fill="#64748b">开始</text>
+  <line x1="30" y1="215" x2="76" y2="215" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <circle cx="110" cy="215" r="26" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <text x="110" y="220" text-anchor="middle" font-size="13" fill="#0f172a">S0</text>
+
+  <!-- 标识符分支 -->
+  <line x1="132" y1="201" x2="308" y2="84" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="205" y="132" text-anchor="middle" font-size="12" fill="#334155">字母</text>
+  <circle cx="330" cy="70" r="26" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <circle cx="330" cy="70" r="20" fill="none" stroke="#4f46e5" stroke-width="1.2"/>
+  <text x="330" y="75" text-anchor="middle" font-size="12" fill="#312e81">ID</text>
+  <path d="M 345 49 C 368 18, 402 42, 372 66" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="412" y="30" font-size="11" fill="#334155">字母 | 数字</text>
+  <text x="365" y="110" font-size="11" fill="#64748b">标识符(输出前查保留字表)</text>
+
+  <!-- 数字分支 -->
+  <line x1="136" y1="212" x2="304" y2="193" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="215" y="186" text-anchor="middle" font-size="12" fill="#334155">数字</text>
+  <circle cx="330" cy="190" r="26" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <circle cx="330" cy="190" r="20" fill="none" stroke="#4f46e5" stroke-width="1.2"/>
+  <text x="330" y="194" text-anchor="middle" font-size="10" fill="#312e81">number</text>
+  <path d="M 315 212 C 300 245, 360 245, 345 212" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="330" y="258" text-anchor="middle" font-size="11" fill="#334155">数字</text>
+  <text x="392" y="218" font-size="11" fill="#64748b">整数常量</text>
+
+  <!-- 数字后接字母:出错 -->
+  <line x1="354" y1="181" x2="556" y2="109" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="455" y="132" text-anchor="middle" font-size="11" fill="#dc2626">字母(报错)</text>
+  <circle cx="580" cy="100" r="26" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="580" y="105" text-anchor="middle" font-size="12" fill="#991b1b">ERR</text>
+  <text x="580" y="58" text-anchor="middle" font-size="11" fill="#dc2626">如 12A:数字中出现非数字</text>
+
+  <!-- 单分界符分支 -->
+  <line x1="134" y1="225" x2="306" y2="300" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="198" y="272" text-anchor="middle" font-size="12" fill="#334155">单分界符</text>
+  <circle cx="330" cy="310" r="26" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <circle cx="330" cy="310" r="20" fill="none" stroke="#4f46e5" stroke-width="1.2"/>
+  <text x="330" y="314" text-anchor="middle" font-size="9" fill="#312e81">singleword</text>
+  <text x="368" y="306" font-size="11" fill="#64748b">+ - * ( ) [ ] { } , ; :</text>
+  <text x="368" y="322" font-size="11" fill="#64748b">(直接输出)</text>
+
+  <!-- 双分界符分支 -->
+  <line x1="129" y1="232" x2="311" y2="393" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="188" y="342" text-anchor="middle" font-size="12" fill="#334155">&gt; &lt; ! =</text>
+  <circle cx="330" cy="410" r="26" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <text x="330" y="414" text-anchor="middle" font-size="9" fill="#0f172a">firstword</text>
+  <line x1="356" y1="410" x2="542" y2="410" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="450" y="400" text-anchor="middle" font-size="12" fill="#334155">=</text>
+  <circle cx="570" cy="410" r="26" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+  <circle cx="570" cy="410" r="20" fill="none" stroke="#4f46e5" stroke-width="1.2"/>
+  <text x="570" y="414" text-anchor="middle" font-size="8" fill="#312e81">doubleword</text>
+  <text x="570" y="370" text-anchor="middle" font-size="11" fill="#64748b">双分界符 &gt;= &lt;= != ==</text>
+
+  <text x="380" y="452" text-anchor="middle" font-size="11" fill="#64748b">双圈为接受状态;识别出完整单词后回退一个字符再输出(jump 状态)。/ 与 * 进入注释处理,见注释 DFA 图。</text>
+</svg>

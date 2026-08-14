@@ -1,0 +1,18 @@
+# 以下源码文件在磁盘上是 GBK 编码(Visual Studio 中文环境默认)。
+# working-tree-encoding=GBK 让 git 在仓库内以 UTF-8 存储、检出时还原为 GBK,
+# 这样 GitHub 网页能正常显示中文注释,本地文件保持原编码不变。
+# 其余 .cpp/.txt 为 UTF-8 或纯 ASCII,无需转换。
+实验一/TEST/Project1/源.cpp working-tree-encoding=GBK
+实验一/源/词法.cpp working-tree-encoding=GBK
+实验三/语义分析/语义分析.cpp working-tree-encoding=GBK
+实验二/语法分析/源1.cpp working-tree-encoding=GBK
+实验二/语法分析/老师的语法分析.cpp working-tree-encoding=GBK
+实验二/语法分析2/源.cpp working-tree-encoding=GBK
+实验二/语法分析3/源.cpp working-tree-encoding=GBK
+实验二/语法分析5/语法分析.cpp working-tree-encoding=GBK
+实验四/虚拟机/虚拟机.cpp working-tree-encoding=GBK
+实验四/虚拟机/虚拟机2.cpp working-tree-encoding=GBK
+实验四/虚拟机/虚拟机3.cpp working-tree-encoding=GBK
+实验四/虚拟机/虚拟机4.cpp working-tree-encoding=GBK
+实验四/虚拟机/语义分析2.cpp working-tree-encoding=GBK
+实验四/虚拟机/语义分析3.cpp working-tree-encoding=GBK

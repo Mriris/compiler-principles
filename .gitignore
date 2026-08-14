@@ -1,0 +1,19 @@
+# Visual Studio 构建产物与本地配置
+.vs/
+x64/
+Debug/
+Release/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.user
+*.tlog
+*.lastbuildstate
+*.recipe
+*.kdtmp
+*.enc
+
+# 整目录的打包快照,内容与仓库重复
+代码和报告.zip
